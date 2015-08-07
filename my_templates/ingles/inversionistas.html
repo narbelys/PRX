@@ -1,0 +1,1720 @@
+<!DOCTYPE html>
+{% load l10n %}
+<html lang="en">
+ <head>
+
+{%include "ingles/script.html" %} 
+<link href="{{ STATIC_URL }}/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+					var id=0
+					$('body').scrollspy({ target: '#navegacion' });
+					
+					
+					var div = $('.recuadro');
+    				
+//     				$('#myTab').on('active', function () {
+// 						alert("HOLAAAAA"); 
+//     				)}; 
+						
+					$('body').on('activate.bs.scrollspy', function (e) {
+// 							alert("HOLAAAAA")
+// 							var obj=$(e).html(); 
+// 							alert(obj)
+// 							alert($(this).html());
+// 							alert($(e).html()); 
+							var activeTab = $('#navegacion li.active a').attr('href');
+// 							alert(activeTab)
+// 							id=id+1; 
+
+//                         <li id="contact" class="menuI"><a href="#Contact" class="menuInvs"><img style="width:20px; height:20px" src="{{ STATIC_URL }}/img/sms.png" alt=""></a> </li>
+
+                        
+                        
+							if (activeTab=="#companyF"){
+								div.animate({'width': '100px'}, 200);
+							}
+							else if(activeTab=="#HomeF"){
+								div.animate({'width': '70px'}, 200);
+							}
+							else if(activeTab=="#problemF"){
+								div.animate({'width': '130px'}, 200);
+							}else if(activeTab=="#ProductsF"){
+								div.animate({'width': '165px'}, 200);
+							}else if(activeTab=="#ClientsF"){
+								div.animate({'width': '195px'}, 200);
+							}else if(activeTab=="#OpportunilyF"){
+								div.animate({'width': '235px'}, 200);
+							}else if(activeTab=="#MoneyF"){
+								div.animate({'width': '260px'}, 200);
+							}else if(activeTab=="#CompetitionF"){
+								div.animate({'width': '290px'}, 200);
+							}else if(activeTab=="#FarF"){
+								div.animate({'width': '320px'}, 200);
+ 							}else if(activeTab=="#PlanF"){
+ 								div.animate({'width': '360px'}, 200);
+							}else if(activeTab=="#TeamF"){
+								div.animate({'width': '360px'}, 200); 
+							}else if(activeTab=="#AdvisorsF"){
+								div.animate({'width': '400px'}, 200);
+							}else if(activeTab=="#LookingF"){
+								div.animate({'width': '440px'}, 200);
+							}else if(activeTab=="#ContactF"){
+								div.animate({'width': '480px'}, 200);
+							}
+							
+							
+					})
+					
+					$('[data-spy="scroll"]').each(function () {
+						var $spy = $(this).scrollspy('refresh')
+					});
+
+					 $("#fb")
+						.mouseover(function() { 
+						$(this).attr("src", "{{ STATIC_URL }}/img/fb_hover.png");
+						})
+						
+						.mouseout(function() {
+							$(this).attr("src", "{{ STATIC_URL }}/img/fb.png");
+						});
+						
+					$("#twitter")
+						.mouseover(function() { 
+						$(this).attr("src", "{{ STATIC_URL }}/img/twitter_hover.png");
+						})
+						
+						.mouseout(function() {
+							$(this).attr("src", "{{ STATIC_URL }}/img/twitter.png");
+						});
+						
+// 					var div = $('.recuadro');
+    				$('#linkCompany1').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '70px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#company").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link2').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '100px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#problem").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				$('#link3').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '130px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Products").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link4').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '165px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Clients").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link5').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '195px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Opportunily").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link6').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '230px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Money").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link7').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '260px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Competition").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#link8').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '290px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Far").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				
+     				$('#link9').click(function(){ //Id del elemento cliqueable
+ 						div.animate({'width': '320px'}, 200);
+ 						
+     					$('html, body').animate({scrollTop:$("#Team").offset().top
+                    }, 'slow');
+     					return false;
+     				});
+    				
+    				
+//     				 $('#link10').click(function(){ //Id del elemento cliqueable
+// 						div.animate({'width': '320px'}, 200);
+// 						
+//     					$('html, body').animate({scrollTop:$("#Team").offset().top
+//                    }, 'slow');
+//     					return false;
+//     				});
+    				
+    				
+    				$('#link11').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '360px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Advisors").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+
+    				
+    				 $('#link12').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '400px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Looking").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				
+      				 $('#contact').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '440px'}, 200);
+						
+    					$('html, body').animate({scrollTop:$("#Contact").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				
+
+    				
+    				$('#linkHome').click(function(){ //Id del elemento cliqueable
+						div.animate({'width': '35px'}, 200);
+    					$('html, body').animate({scrollTop:$("#Home").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+
+    			});
+	
+  </script>
+  
+	<script>
+
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement
+
+		(o),
+
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.
+
+		insertBefore(a,m)
+
+		})(window,document,'script','//www.google-analytics.com/analytics.
+
+		js','ga');
+
+		ga('create', 'UA-44320155-1', 'prxcontrolsolutions.com');
+
+		ga('send', 'pageview');
+
+	</script>
+	
+	<style>
+		h1{
+		font-size:38px
+		}
+		
+		.home{
+		font-size:44px
+		}
+		.container{
+			width: 1024px !important;
+		}
+		.navbar-inner{
+			background:#fff !important; 
+			color: #4a4a4a !important;
+			padding-bottom:20px !important;
+		}
+		
+		.menuInvs {
+			color: #4a4a4a !important;
+			font-family: 'Roboto', sans-serif !important;
+			padding-left:10px !important;
+			padding-right:10px !important;
+			padding-top:10px !important;
+			padding-bottom:0px !important;
+			font-size:14px !important; 
+		}
+		
+		div.recuadro {
+			background:#f27516;
+			width: 35px;
+			margin-top:-2px; 
+			height:2px; 
+			margin-left:50.5%; 
+			position:absolute; 
+		
+/* 			transition-property: background; */
+/* 			transition-duration: 0.5s; */
+			
+			-moz-transition:width 0.6s, -moz-transform 0.6s;
+			-webkit-transition:width 0.6s,  -webkit-transform 0.6s;
+			-o-transition:width 0.6s, -o-transform 0.6s;
+			transition:width 0.6s, transform 0.6s;
+		}
+		
+		.cubierta{
+			background:#ccc; 
+ 			margin-left:50.5%; 
+ 			width: 500px;
+ 			height:2px;
+ 			margin-top:10px; 
+		}
+		
+/* 		#linkCompany:hover{ */
+/* 		} */
+
+		.cajitaSombra{
+			box-shadow: 2px 2px 20px #9e9e9e;
+			padding:10px; 
+		}
+		
+ 		.recuadroAc {
+ 			background: #CCDD55; 
+ 			width: 300px;
+ 		} 
+ 		
+ 		.menuInvs{
+			margin-left:4px; 
+ 		}
+		
+		.menuInvs:hover {
+ 			color:#f27516 !important;
+ 			text-shadow: none !important;
+		}
+		
+		.nav .active > a, .navbar-inverse .nav .active > a:hover, .navbar-inverse .nav .active > a:focus{
+			color:#f27516 !important;
+			background-color: transparent !important;
+			box-shadow: none !important;
+		}
+		
+		h2{
+			font-size:48px;
+			line-height:60px;
+			font-family: 'Roboto', sans-serif !important;
+		}
+		
+		h3{
+			font-size:16px; 
+			font-family: 'Roboto', sans-serif !important;
+		}
+		
+		h4{
+			line-height: 30px !important; 
+		}
+		
+		h5{
+			font-size:36px; 
+			font-family: 'Roboto', sans-serif !important;
+		}
+        
+        h6 {
+
+        color: #002f64;
+        font-family: 'Roboto', sans-serif;
+        font-size: 32px;
+        font-weight: bold;
+        }
+		
+		.circular_shadow { 
+ 			width: 100px; 
+ 			height: 100px;  
+			border-radius: 150px; 
+			-webkit-border-radius: 150px; 
+			-moz-border-radius: 150px; 
+			 box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+			-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8); 
+			-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+		}
+		
+
+	
+	</style>
+  
+  </head>
+  <body data-spy="scroll" data-target="#navegacion">
+  
+			
+  
+	<div class="navbar navbar-inverse navbar-fixed-top">
+          <div class="navbar-inner" id="navegacion">
+           <div class="container">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse" style="padding-top:20px">
+              <ul class="nav pull-right" style="" id="myTab">                       
+                        <li id="linkHome" class="menuI"><a href="#HomeF" class="menuInvs">HOME</a> </li>
+                        <li id="linkCompany1" class="menuI"><a href="#companyF" class="menuInvs">1</a> </li>
+                        <li id="link2" class="menuI"><a href="#problemF" class="menuInvs" target="blank">2</a> </li>
+                         <li id="link3" class="menuI"><a href="#ProductsF" class="menuInvs">3</a> </li>
+                        <li id="link4" class="menuI"><a href="#ClientsF" class="menuInvs">4</a> </li>
+                        <li id="link5" class="menuI"><a href="#OpportunilyF" class="menuInvs">5</a> </li>
+                        <li id="link6" class="menuI"><a href="#MoneyF" class="menuInvs">6</a> </li>
+                        <li id="link7" class="menuI"><a href="#CompetitionF" class="menuInvs">7</a> </li>
+                        <li id="link8" class="menuI"><a href="#FarF" class="menuInvs">8</a> </li>
+                        
+<!--                         <li id="link9" class="menuI"><a href="#PlanF" class="menuInvs">9</a> </li> -->
+<!-- 						<li id="link9" class="menuI"><a href="#PlanF" class="menuInvs">9</a> </li> -->
+						<li id="link9" class="menuI"><a href="#PlanF" class="menuInvs">9</a> </li>
+<!--                         <li id="link10" class="menuI"><a href="#TeamF" class="menuInvs">9</a> </li> -->
+                         <li id="link11" class="menuI"><a href="#AdvisorsF" class="menuInvs">10</a> </li>
+                        <li id="link12" class="menuI"><a href="#LookingF" class="menuInvs">11</a> </li>
+                        <li id="contact" class="menuI"><a href="#ContactF" class="menuInvs"><img style="width:20px; height:20px" src="{{ STATIC_URL }}/img/sms.png" alt=""></a> </li>
+
+    					
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+          
+           <div class="cubierta" >
+          </div>
+          
+          
+          <div class="recuadro" style="">
+          </div>
+          
+
+        </div><!-- /.navbar -->
+      </div>
+      
+      <div class="container" id="Home">
+		<div class=row-fluid style="padding-top:100px; padding-bottom:20px; ">
+		
+		    
+			<center>
+			 <a class="brand" href="#"><img style="width:113px; height:73px" src="{{ STATIC_URL }}/img/company_logo.png" alt=""></a>
+			<h1 class="home">
+				Prescription Intelligence
+			</h1>
+			
+			 <a class="brand" href="#"><img style="" src="{{ STATIC_URL }}/img/paginas.png" alt=""></a>	
+			 
+			 <iframe width="940" height="500" src="//www.youtube.com/embed/FjgOK9Ku800?autohide=1&amp;version=3&amp;autoplay=1enablejsapi=1" frameborder="0" allowfullscreen=""></iframe>
+			
+<!--
+			<h2>
+				Business intelligence applied to the pharmaceutical industry
+			</h2>
+-->
+			</center>
+		</div>
+	</div>
+	
+		<div id="HomeF">	</div>
+		<div class="divisor" id="company"></div>
+<!-- 		<hr> -->
+	<div class="prueba" style="background: -moz-radial-gradient(center, ellipse cover,  rgba(2,59,120,0.7) 0%, rgba(2,59,120,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(2,59,120,0.7)), color-stop(100%,rgba(2,59,120,1))); /* Chrome,Safari4+ */
+background: -webkit-radial-gradient(center, ellipse cover,  rgba(2,59,120,0.7) 0%,rgba(2,59,120,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-radial-gradient(center, ellipse cover,  rgba(2,59,120,0.7) 0%,rgba(2,59,120,1) 100%); /* Opera 12+ */
+background: -ms-radial-gradient(center, ellipse cover,  rgba(2,59,120,0.7) 0%,rgba(2,59,120,1) 100%); /* IE10+ */
+background: radial-gradient(ellipse at center,  rgba(2,59,120,0.7) 0%,rgba(2,59,120,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3023b78', endColorstr='#023b78',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+">
+	<div class="container"  style="">
+		<div class="row-fluid" style="padding-top:80px;" >
+			<div class="span7">
+			<h1 style="color:#f2f2f2; border-bottom:solid 4px #f2f2f2">THE COMPANY</h1>
+
+			<h3 style="color:#f2f2f2">
+PRX Control Solutions is a tech company that designs and develops solutions for prescription control and management, focused on reducing the costs of pharmaceutical treatments in health plans.
+			</h3>
+
+			</div>
+		</div>
+		<div class="row-fluid" style="padding-top:50px;" >
+			<h2 style="color:#f2f2f2">
+		<div id="companyF">	</div>
+<center>
+Our products and services are designed and developed for prescription control and health 
+
+management.
+</center>
+			</h2>
+			</br>
+			</br>
+			</br>
+			</br>
+		</div>
+	</div>
+	</div>
+	
+      <div class="divisor" id="problem"></div>
+ 	<div class="container" style="padding-bottom:20px;" >  
+      	<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">THE PROBLEM</h1>
+			
+			<h4 style="text-align:left !important;">In PRX we solve 3 problems</h4>
+			</div>
+		</div>
+<!-- 			<hr> -->			
+			<div class="row-fluid" style="padding-top:50px;">
+			<div class="span4 cajitaSombra" >
+				<h4>INSUFFICIENT CONTROL</h4>
+				<center>There's insufficient control over medication consumption from health insurance providers. </center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<h4>INSUFFICIENT SUPERVISION</h4>
+				<center>There's insufficient supervision of patient's healths from healthcare providers or pharmacies.</center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<h4>INSUFFICIENT DATA</h4>
+				<center>There's insufficient real time health analytics for the pharmaceutical industry from real clinical cases. </center> 
+			</div>
+			</div>
+
+			<div class="row-fluid" style="padding-top:50px;">
+				<div class="span2" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				
+			</div>
+			<div id="problemF">	</div>
+			</br>
+			<center>
+			
+			<h1> More than 50% of prescriptions in the United States aren’t taken as 
+
+prescribed, costing the country up to $289b and 125.000 
+
+deaths a year.</h1>
+			</br>
+			</br>
+<!--			</br>-->
+<!--			<h1>
+			Now, imagine these numbers in Latin America
+			</h1>-->
+<!--			</br>
+			</br>-->
+			<h3>(Source: <a href="http://www.theatlantic.com/health/archive/2012/09/the-289-billion-cost-of-medication-
+noncompliance-and-what-to-do-about-it/262222/">http://www.theatlantic.com/health/archive/2012/09/the-289-billion-cost-of-medication-
+noncompliance-and-what-to-do-about-it/262222/</a>)</h3>
+			</center>
+		</div>
+		
+      </div>
+      
+    <div class="divisor" id="Products"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">OUR PRODUCTS</h1>
+			
+			<h4 style="text-align:left !important;">How we solve the problems</h4>
+			</div>
+			</div>
+			
+			
+			<div class="row-fluid" style="padding-top:50px">
+			<div class="span3" >
+				<center><img  SRC="{{ STATIC_URL }}/img/logo_pcaauditcolor.png" width=125px height= 67px></center>
+            </div>
+            <div class="span9 cajitaSombra" >
+				<center>App that controls the expense of pharmaceutical treatments in health plans.<br><br></center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			
+			<div class="span3" >
+			    <center><img  SRC="{{ STATIC_URL }}/img/logo_pcafarma.png" width=143px height= 57px></center>
+			</div>
+			<div class="span9 cajitaSombra">	
+				<center>App for controlling and supervising chronic patients in health plans.<br><br></center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			
+			<div class="span3" >
+			    <center><h6>Delivery <br><br> Farma</h6></center>
+			</div>
+			<div class="span9 cajitaSombra">	
+				<center>Prescription delivery under pharmaceutical supervision
+ to chronic patients identified by PCA Audit.</center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			<div class="span3" >
+			    <center><img  SRC="{{ STATIC_URL }}/img/PCA-Metrics.png" width=143px height=57px></center>
+			</div>
+			<div class="span9 cajitaSombra">
+				<center>Real time data from real prescriptions. <br><br></center> 
+			</div>
+			</div>
+			
+<!--
+
+			<div class="row-fluid" style="padding-top:50px;">
+				<div class="span2" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+-->
+			<div id="ProductsF"></div>
+<!--
+				</br>
+				</br>
+				</div>
+				
+				
+			</div>
+-->
+			
+
+			
+		</div>
+	</div>
+	
+	<div class="divisor" id="Clients"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">OUR CUSTOMERS</h1>
+			
+			<h4 style="text-align:left !important;">Business 2 business:</h4>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px;">
+			    <div class="span6" >
+			    <center>
+			    <i class="fa fa-umbrella" style="font-size:150px"></i>
+			   
+			    <br>
+			    <h6>Insurance market</h6>
+                   <br>
+                    <div style="padding-left:20px">
+                    <p>
+                        - Insurance companies	
+                    </p>
+                    <p>
+                        - Health plans
+                    </p>
+                    <p>
+                        - Government institutions
+                    </p>
+                    </div>
+                 </center>
+			    </div>			    
+			    
+			    <div class="span6" >
+                  <center>
+			      <i class="fa fa-medkit" style="font-size:150px"></i>
+			     <h6>Pharmaceutical industry</h6>
+			     <div style="padding-left:20px">
+			     <br>
+			     <p>
+			         - Pharmacies
+                </p>
+                <p>
+                    - Pharmaceutical companies
+                </p>
+                <p>
+                    - Patients
+                </p>
+                </div>
+                </center>
+            
+			    </div>
+			</div>
+			
+<!--
+			<div class="row-fluid" style="padding-top:50px;">
+			<div class="span4 cajitaSombra" >
+				<h4>PCA Audit</h4>
+				- Insurance Companies</br>
+				- Government Institutions</br>
+				- Health Providers</br>
+				</br>
+			</div>
+			<div class="span4 cajitaSombra">
+				<h4>PCA Farma</h4>
+				- Pharmacies</br>
+				- Government Institutions</br>
+				- Patients</br> 
+				</br>
+			</div>
+			<div class="span4 cajitaSombra">
+				<h4>PCA Metrics</h4>
+				- Pharmaceutical Industry</br>
+				- Government</br> 
+				- Health Providers</br>
+				- Physicians
+			</div>
+			</div>
+-->
+<!--
+
+			<div class="row-fluid" style="padding-top:50px;">
+				<div class="span2" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e;">
+-->
+				<div id="ClientsF">	</div>
+<!--
+				</br>
+				</br>
+				</div>
+				
+			</div>
+-->
+		</div>
+	</div>
+
+	
+	<div class="divisor" id="Opportunily"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">THE OPPORTUNITY</h1>
+			
+			<h4 style="text-align:left !important;">We're starting in Latin America</h4>
+			</div>
+			</div>
+			
+			<h1 style="text-align:center !important;">Size of Market</h1>
+			
+			<div class="row-fluid" style="padding-top:50px;">
+			<div class="span4" >
+				<center>
+				<center><img  SRC="{{ STATIC_URL }}/img/logo_pcaauditcolor.png" width=125px height= 67px></center>
+				</br>
+				<div id="OpportunilyF">	</div>
+				<img style="" src="{{ STATIC_URL }}/img/america.png" alt="">
+				<h4 style="font-size:28px">Market > US$1B</h4>
+				</center>
+			</div>
+			<div class="span8 ">
+				
+				<div class="row-fluid">
+                   <center>
+                    <div class="span6">
+                    <img  SRC="{{ STATIC_URL }}/img/logo_pcafarma.png" width=143px height= 57px>
+                    </div>
+                    <div class="span6">
+                    <h6>Delivery <br><br> Farma</h6></center>
+                    </div>
+                    </center>
+				</div>
+				
+				<center>
+				<div class="row-fluid">
+				<img style="" src="{{ STATIC_URL }}/img/america.png" alt="">
+				<h4 style="font-size:28px">Market > US$20B</h4>
+				</div>
+				</center>
+<!--
+			</div>
+			<div class="span4 ">
+-->
+<!--
+				<center>
+				<h1 style="font-size:34px">PCA Metrics</h1>
+				<h4 style="font-size:28px">$10.8 B</h4>
+				<h4>(by 2.017)</h4>
+				</br>
+				<img style="" src="{{ STATIC_URL }}/img/mundo.png" alt="">
+				</center>
+-->
+			</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<div class="divisor" id="Money"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">HOW WE MAKE MONEY</h1>
+			
+			<h4 style="text-align:left !important;">Sources of revenue</h4>
+			</div>
+			</div>
+			
+<!--
+			<div class="row-fluid" style="padding-top:50px; padding-left:100px">
+				<div class="span2" style="width:250px; border-top: 3px dashed #9e9e9e;position:absolute; -ms-transform:rotate(160deg); -o-transform:rotate(160deg); -moz-transform:rotate(160deg); -webkit-transform:rotate(160deg);">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	border-right: 3px dashed #9e9e9e; margin-left:80px ; ">
+				</br>
+				</br>
+				</div>
+				
+				<div class="span4" style="	width:250px; border-top: 3px dashed #9e9e9e; position:absolute;-ms-transform:rotate(200deg); -o-transform:rotate(200deg); -moz-transform:rotate(200deg); -webkit-transform:rotate(200deg); margin-left:550px">
+				</br>
+				</br>
+				</div>
+				
+			</div>
+-->
+			
+<!--
+			<div class="row-fluid" style="padding-top:90px;">
+			<div class="span4 cajitaSombra" >
+				<center>
+				<h4>TRANSACTION BASED SYSTEM</h4>
+				$2.5 - $0.5 per claim + monthly fee
+				</br>
+				</center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<center>
+				<h4>MONTHLY FEE</h4>
+				$450 - $250 per pharmacy
+				</br>
+				</center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<center>
+				<h4>MONTHLY FEE</h4>
+				$5.000 - $10.000 per report
+				</center>
+			</div>
+			</div>
+-->
+        
+		<div class="row-fluid" style="padding-top:50px">
+			<div class="span3" >
+				<center><img  SRC="{{ STATIC_URL }}/img/logo_pcaauditcolor.png" width=125px height= 67px></center>
+            </div>
+            <div class="span9 cajitaSombra" >
+				<center><br>Pay per transaction + monthly fee (US$2.5 – US$1.5 per claim) <br><br></center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			
+			<div class="span3" >
+			    <center><img  SRC="{{ STATIC_URL }}/img/logo_pcafarma.png" width=143px height= 57px></center>
+			</div>
+			<div class="span9 cajitaSombra">	
+				<center><br>Fee per patient (US$1.5 per patient) <br><br></center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			
+			<div class="span3" >
+			    <center><h6>Delivery <br><br> Farma</h6></center>
+			</div>
+			<div class="span9 cajitaSombra">	
+				<center><br>Pharmaceutical treatments (depends on market prices) <br><br></center>
+			</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px">
+			<div class="span3" >
+			    <center><img  SRC="{{ STATIC_URL }}/img/PCA-Metrics.png" width=143px height=57px></center>
+			</div>
+			<div class="span9 cajitaSombra">
+				<center><br>Pay per prescription (US$0.5 – US$0.3) <br><br></center> 
+			</div>
+			</div>
+			
+			<div id="MoneyF">	</div>
+
+		</div>
+	</div>
+
+	
+	<div class="divisor" id="Competition"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">COMPETITION</h1>
+			
+			<h4 style="text-align:left !important;">In Latin America and the US</h4>
+			</div>
+			</div>
+			<div class="row-fluid" style="padding-top:50px;">
+				<div class="span4">
+					<center>
+					<center><img  SRC="{{ STATIC_URL }}/img/logo_pcaauditcolor.png" width=125px height= 67px></center>
+					<br>
+
+<!-- 				<img style="" src="{{ STATIC_URL }}/img/logo1.png" alt=""> -->
+<!-- 				<img style="" src="{{ STATIC_URL }}/img/logo2.png" alt=""> -->
+                    <div class="cajitaSombra" style="margin-top:15px">
+                        
+                   
+					<img style="width:220px; height:84px; padding-top:32px; padding-bottom:32px" src="{{ STATIC_URL }}/img/Rx_Claim.png" alt=""> 
+					 </div>
+					</center>
+				</div>
+				
+				<div class="span4"  >
+				<center>
+				<img  SRC="{{ STATIC_URL }}/img/logo_pcafarma.png" width=143px height= 57px>
+				
+				<br>
+
+				<div class="cajitaSombra" style="margin-top:40px">
+				<img style="padding-top:25px; padding-bottom:25px; " src="{{ STATIC_URL }}/img/logo3.png" alt="">
+				</div>
+				</center>
+				</div>
+				
+				<div class="span4"  >
+				<center>
+				<h6>Delivery <br><br> Farma</h6>
+				<br>
+				<div class="cajitaSombra">
+				<img  src="{{ STATIC_URL }}/img/logoC1.png" alt="" width="164" height="47" >
+				<img style="" src="{{ STATIC_URL }}/img/logoC2.png" alt="" width="164" >
+				<img style="" src="{{ STATIC_URL }}/img/logoC3.png" alt="" width="164" >
+				</div>
+				</center>
+				</div>
+			</div>
+<!--
+			<div class="row-fluid" style="padding-top:20px;">
+			<div class="span4 cajitaSombra" >
+				<center>
+				These companies are focused in EHR  (electronic health records). We focus in pharmaceutical treatments
+				</center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<center>
+				This company helps pharmacies to engage better with patients and is only focused in the US
+				</center>
+			</div>
+			<div class="span4 cajitaSombra">
+				<center>
+				IMS Health projects data from wholesale drug providers
+				and doctor interviews. 
+				We provide realtime data
+				</center>
+			</div>
+			</div>
+-->
+			
+			<div id="CompetitionF">	</div>
+
+		</div>
+	</div>
+	
+
+	
+	<div class="divisor" id="Far"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">WHAT WE’VE DONE SO FAR</h1>
+			
+			<h4 style="text-align:left !important;">We’re young but with plenty to show</h4>
+			</div>
+			</div>
+			<div class="container" style="width: 800px !important;">
+				<div class="row-fluid cajitaSombra" style="margin-top:60px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo5.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Wayra Venezuela 2.012 winners. Telefónica own 10% of the company
+					
+<!--					Wayra Venezuela (Telefonica’s startup accelerator) 2.012 alumni. -->
+					</center>
+				</div>
+				</div>
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="width: 80px;" src="{{ STATIC_URL }}/img/logo6.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					More than US$10M in savings for our customers in our first year of operations.
+<!--					We’ve built a great team of developers, operations and sales. -->
+					</center>
+				</div>
+				</div>
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo7.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					    PCA Audit with 5 customers and >$35K monthly sales. 3 more customers in pilot tests in Venezuela and 4 in Panama
+<!--					4 clients using PCA Audit in Venezuela with more than $25.000 in monthly sales and 3 more in the integration process.-->
+					</center>
+				</div>
+				</div>
+				
+				<div id="FarF">	</div>
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo_pcafarma.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Project of PCA Farma and Delivery Farma with Mercantil Seguros in Venezuela starting November 2.014
+<!--					Launched October 1st, with 4 pharmacy chains interested in the app and a joint venture with Pfizer (see below). -->
+					</center>
+				</div>
+				</div>
+				
+				
+				
+<!--
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/PCA-Metrics.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					PCA Metrics is in development and it’ll be launched in mid-2.014.
+					</center>
+				</div>
+				</div>
+-->
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo4.png" alt="">
+<!--					<img style="" src="{{ STATIC_URL }}/img/logo10.png" alt="">-->
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					In conversations with IMS Health for the acquisition of our prescription data
+<!--					Alliance with Pfizer to install PCA Farma in several pharmacies around the country (project for the whole LA region) -->
+					</center>
+				</div>
+				</div>
+				
+				
+				
+<!--				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo11.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					In talks with PharmaTrack, a company interested in representing PRX in Venezuela, Argentina and Peru. 
+					</center>
+				</div>
+				</div>-->
+				
+				
+<!--
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo12.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					We hired Fron Consulting Group to seek out investors in 9 countries of Latin America. 
+					</center>
+				</div>
+				</div>
+-->
+				
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="width: 80px;" src="{{ STATIC_URL }}/img/logo13.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px;">
+					<center>
+					    Moving our head office to Miami in January 2.015 
+					</center>
+				</div>
+				</div>
+				
+				
+<!--				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo14.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Start operations in 7 new countries in 2 years: Mexico, Colombia, Perú, Ecuador, Argetina/Uruguay and Chile. 
+					</center>
+				</div>
+				</div>
+				-->
+				
+				
+<!--				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo15.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Relocate our executive and commercial office to Miami, Florida to be close to the action.
+					</center>
+				</div>
+				</div>-->
+				
+				
+<!--				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo16.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Complete our executive team with a CFO, CTO and CMO to help us grow our business.
+					</center>
+				</div>
+				</div>
+				
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo18.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Complete our board with experienced and knowledgeable directors. 
+					</center>
+				</div>
+				</div>-->
+				
+			</div>
+
+		</div>
+	</div>
+
+	
+<!--	
+	
+<div class="divisor" id="Plan"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span6">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">Our Expansion Plan</h1>
+			
+			<h4 style="text-align:left !important;">We’ve designed a licensing model to find local business partners all over 
+
+Latin America, who can represent and offer the company’s products and 
+
+services by paying a royalty over sales</h4>
+			</div>
+			</div>
+			<div class="container" style="">
+				<div class="row-fluid" style="margin-top:20px; padding:10px">
+				<div class="span8" >
+					<div class="row-fluid" style="margin-top:0px; padding:10px">
+					<div class="span6" >
+					<img style="" src="{{ STATIC_URL }}/img/logo7.png" width="270px" height="167px" alt="">
+					</div>
+					
+					<div class="span6" style="padding-top:80px" >
+					<center>
+					<h5 style="font-size:24px;  ">25% royalty over monthly sales</h5>
+					</center>
+					</div>
+					</div>
+					
+					
+					<div class="row-fluid" style="margin-top:0px; padding:10px">
+					<div class="span6" >
+					<img style="" src="{{ STATIC_URL }}/img/logo_pcafarma.png" width="270px" height="167px" alt="">
+					</div>
+					
+					<div class="span6"  style="padding-top:80px">
+					<center>
+					<h5 style="font-size:24px">20% royalty over monthly sales</h5>
+					</center>
+					</div>
+					</div>
+					
+					
+					<div class="row-fluid" style="margin-top:0px; padding:10px">
+					<div class="span6" >
+					<img style="" src="{{ STATIC_URL }}/img/PCA-Metrics.png" width="270px" height="167px" alt="">
+					</div>
+					
+					<div class="span6" style="padding-top:80px">
+					<center>
+					<h5 style="font-size:24px">30% royalty over monthly sales</h5>
+					</center>
+					</div>
+					</div>
+					
+				</div>
+				<div class="span4" style="padding-top:30px">
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/imagenH1.jpg" alt="">
+					</center>
+				</div>
+				</div>
+				
+				
+				
+				
+			</div>
+
+		</div>
+	</div>-->
+	<div id="PlanF"></div>
+	
+	<div class="divisor" id="Team"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">OUR GREAT TEAM</h1>
+			
+			<h4 style="text-align:left !important;">Very talented people in one office</h4>
+			</div>
+			</div>
+<!--			<div class="row-fluid" style="padding-top:50px;">
+				<center>
+				<img style="width:748px; height:586px" src="{{ STATIC_URL }}/img/grupo.jpg" alt="">
+				</center>
+			</div>-->
+			
+			<div class="row-fluid" style="padding-top:60px;">
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_alfredo.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Alfredo Luis Vaamonde</h4>
+					<h3> <center>CEO </center></h3>
+					B. Sc. in Business from Universidad Metropolitana. Diplomaed in pharmaceutical marketing. More than 10 years working in the pharmaceutical industry.
+					<a href="http://www.linkedin.com/pub/alfredo-vaamonde/15/a73/aa2"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+
+					<a href="https://twitter.com/VaamondeAlfredo"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_edu.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Edwarlyn Bencomo</h4>
+					<h3> <center>Operations</center></h3>
+					 B. Sc. in Pharmacy from Universidad Central de Venezuela.
+					 <a href="http://www.linkedin.com/pub/edwarlyn-bencomo/57/382/46"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+
+					<a href="https://twitter.com/ewarlina"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>			
+<!--
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_julio.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Julio Pérez</h4>
+					<h3> <center>CMO</center></h3>
+					BsC in International Relations. Diplomaed in Negotiations from IESA. Lead of country portfolio from Pfizer.
+					<a href="https://ve.linkedin.com/pub/julio-ramon-perez/1b/b2a/591"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					</center>
+				</div>
+-->
+				
+				
+				<div class="span4" style="">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/miguel-ambrosio.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Miguel Ambrosio</h4>
+					<h3> <center>CTO</center></h3>
+					B. Sc. in Computer Science from Universidad Simón Bolívar.
+					<a href="http://www.linkedin.com/pub/miguel-ambrosio/2b/925/170"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"> </a>
+
+					<a href="https://twitter.com/miguelcontuiter"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+				
+			</div>
+			
+			<div class="row-fluid" style="padding-top:60px;">
+			
+				<div class="span2">
+				</div>
+				
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_narbe1.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Narbelys Oropeza</h4>
+					<h3> <center>Software Architect</center></h3>
+					B. Sc. in Computer Science from Universidad Simón Bolívar.
+					<a href="http://www.linkedin.com/pub/narbelys-oropeza/2a/246/87b"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					<a href="https://twitter.com/ncor_narbe"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+				
+<!--
+			
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_manuel2.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Manuel Gómez</h4>
+					<h3> <center>Servers and database specialist</center></h3>
+					B. Sc. in Computer Science from Universidad Simón Bolívar.
+					<a href="http://www.linkedin.com/pub/manuel-g%C3%B3mez/84/22a/659"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					<a href="https://twitter.com/mgomezch"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+-->
+				
+				
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/augusto.png) no-repeat;"></div>
+					<hr>
+					<h4>Augusto Ascanio</h4>
+					<h3> <center>Project Manager </center></h3>
+					B. Sc. in Computer Science from Universidad Simón Bolívar.
+					<a href="https://ve.linkedin.com/pub/augusto-ascanio/a5/269/721/"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					<a href="https://twitter.com/Ascanio_Augusto"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+				
+				<div class="span2">
+				</div>
+				
+			</div>
+<!--
+			
+			<div class="row-fluid" style="padding-top:60px;">
+				<div class="span4">
+				</div>
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_edu.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Edwarlyn Bencomo</h4>
+					<h3> <center>Operations coordinator</center></h3>
+					 B. Sc. in Pharmacy from Universidad Central de Venezuela.
+					 <a href="http://www.linkedin.com/pub/edwarlyn-bencomo/57/382/46"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+
+					<a href="https://twitter.com/ewarlina"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					</center>
+				</div>
+				<div class="span4">
+				</div>
+-->
+			</div>
+			<div id="TeamF">	</div>
+<!--			<div class="row-fluid" style="padding-top:60px;">
+					<div class="span4">
+					</div>
+					<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/) no-repeat;"></div>
+					<hr>
+					<h4>Pedro Padrón</h4>
+					<h3> <center> Sales representative</center></h3>
+					Marketing Graduate from Universidad Experimental Simón Bolívar.
+					 <a href="http://www.linkedin.com/pub/pedro-miguel-padron-diaz/7b/642/1b1"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					 </center>
+					 </div>
+			</div>-->
+
+
+		</div>
+	</div>
+	
+	
+	
+	
+	
+	<div class="divisor" id="Advisors"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+<!--			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span7">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">INVESTORS AND ADVISORS</h1>
+			</div>
+			</div>-->
+			
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;"> BOARD MEMBERS</h1>
+<!-- 			<h1 style="border-bottom:solid 4px #4a4a4a;">INVESTORS</h1> -->
+			</div>
+			</div>
+			
+			
+			<div class="row-fluid" style="padding-top:60px;">
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_LAV.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Luis Alberto Vaamonde</h4>
+<!--
+					B. Sc. in Business from Nova University, Fl. CEO of AUXIMED. More than 15 years of 
+experience in the pharmaceutical industry.
+-->
+					</center>
+				</div>
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_jorge.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Jorge Matheus</h4>
+<!--
+					ME from California Polytechnic State University. Represents Micro Systems in Venezuela 
+
+and Colombia.
+-->
+					</center>
+				</div>
+				
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Bonky.png) no-repeat;"></div>
+					<hr>
+					<h4>Alberto Espinoza</h4>
+<!--
+					MBA from Lehigh University in Pennsylvania. Experience in the food and construction 
+
+industry.
+-->
+					</center>
+				</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:60px;">
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_gonzalo.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Gonzalo Clemente</h4>
+<!--					PHD in Industrial Engineering, NC State University. Former Director of Banesco Financial Group. Angel Investor. -->
+					</center>
+				</div>
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_nelson.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Nelson Becerra</h4>
+<!--					B. Sc. in Computer Science, Universidad Central de Venezuela. Former Director of Banesco Financial Group. Angel Investor. -->
+					</center>
+				</div>
+				
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/foto_gustavo.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Gustavo Reyes</h4>
+					
+					</center>
+				</div>
+			</div>
+			
+			
+			
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span4">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">ADVISORS</h1>
+			</div>
+			</div>
+			<div class="row-fluid" style="padding-top:60px;">
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_Alexander.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Alexander Rafael Gómez</h4>
+					 B. Sc. in Computer Science Engineer with an MBA. Country manager for Wayra 
+
+Venezuela.
+					<a href="http://www.linkedin.com/pub/alexander-g%C3%B3mez/40/962/576"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+
+					<a href="https://twitter.com/AlexRGomezH"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					
+					</center>
+				</div>
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_Isabel.jpg) no-repeat;"></div>
+					<hr>
+					<h4>Isabel Cristina Acosta</h4>
+					Economist with Masters in Finance and in Marketing. Independent consultant for 
+
+Fundación Ideas. Teacher of School of Economics in Universidad Católica Andrés Bello.
+
+					<a href="http://www.linkedin.com/pub/isabel-cristina-acosta/15/366/9a4"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/LinkedIn_Logo.png" alt="linkedin"></a>
+					</center>
+				</div>
+				
+				<div class="span4">
+					<center>
+					<div class="circular_shadow" style="background: url({{ STATIC_URL }}/img/Foto_jose.jpg) no-repeat;"></div>
+					<hr>
+					<h4>José Rafael Paz</h4>
+					 B. Sc. in Chemistry. Worked for 30 years in PDVSA where he sat in the board of directors. 
+
+Founder of Demprender.
+					<a href="https://twitter.com/JoseRPaz"><img style="width:30px; height:30px" src="{{ STATIC_URL }}/img/Twitter_logo.png" alt="twitter"></a>
+					
+					</center>
+				</div>
+			</div>
+			
+		
+
+
+		</div>
+	</div>
+	
+	<div id="AdvisorsF">	</div>
+	
+	
+	
+	<div class="divisor" id="Looking"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px;">
+			<div class="span5">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">WHAT WE’RE LOOKING FOR</h1>
+			
+			<h4 style="text-align:left !important;">For our next big steps we’re searching for the best investors and partners a company can have</h4>
+			</div>
+			</div>
+			<div class="container" style="width: 800px !important;">
+				<div class="row-fluid cajitaSombra" style="margin-top:60px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo14.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:30px">
+					<center>
+					Start operations in 4 new countries in 2 years: Panamá, México, Colombia and Perú. 
+					</center>
+				</div>
+				</div>
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo15.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:20px">
+					<center>
+					Relocate our executive and commercial office to Miami, Florida to be close to the action.
+					</center>
+				</div>
+				</div>
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo16.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:30px">
+					<center>
+					Complete our executive team with a CFO, CTO and CMO to help us grow our business.
+					</center>
+				</div>
+				</div>
+				
+				
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" >
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/logo18.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:40px">
+					<center>
+					Complete our board with experienced and knowledgeable directors. 
+					</center>
+				</div>
+				</div>
+				
+				<div class="row-fluid cajitaSombra" style="margin-top:10px; padding:10px">
+				<div class="span2" style="padding-top:20px;">
+					<center>
+					<img style="" src="{{ STATIC_URL }}/img/us-map.png" alt="">
+					</center>
+				</div>
+				<div class="span10" style="padding-top:40px; padding-bottom:40px">
+					<center>
+					Explore the US market for our products. 
+					</center>
+				</div>
+				</div>
+				
+				
+				
+				
+			</div>
+
+		</div>
+	</div>
+	
+	<div id="LookingF">	</div>
+	
+	
+	
+		
+	<div class="divisor" id="Contact"></div>
+ 	<div class="container" style="padding-bottom:100px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+      	
+			<div class="row-fluid" style="padding-top:60px; padding-bottom:50px;">
+			<div class="span3">
+			<h1 style="border-bottom:solid 4px #4a4a4a;">CONTACT</h1>
+			
+			
+			</div>
+			</div>
+			 <hr>
+			 <center>
+			 <a class="btn btn-large btn-primary btnFarmacia" style="position:absolute; margin-top:-40px; margin-left:-70px" href="/contact">CONTACT</a>
+<!-- 			<h4 style="text-align:left !important;">For our next big steps we’re searching for the best investors and partners a company can have</h4> -->
+			
+			
+			</center>
+			
+			
+			<div class="row-fluid" style="padding-top:40px;">
+			 <center>
+			 <a class="" style="" href='https://www.facebook.com/prxcontrolsolutions' target="blank"><img style="width:60px; height:60px" id="fb" src="{{ STATIC_URL }}/img/fb.png" alt=""></a>
+			
+			 <a class="" style="" href='https://twitter.com/prxsolutions' target="blank"><img style="width:60px; height:60px" id="twitter" src="{{ STATIC_URL }}/img/twitter.png" alt=""></a>
+			</center>
+			</div>
+			
+			
+			
+			
+			<div class="container" style="width: 800px !important;">
+		
+				
+	
+				
+				
+				
+				
+			</div>
+
+		</div>
+	</div>
+
+	<div id="ContactF">	</div>
+
+	{%include "ingles/footer.html"%}
+	
+  </body>
+  
+  
+</html>

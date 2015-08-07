@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+{% load l10n %}
+<html lang="en">
+ <head>
+ 
+{%include "ingles/script.html" %} 
+
+		<script>
+
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement
+
+			(o),
+
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.
+
+			insertBefore(a,m)
+
+			})(window,document,'script','//www.google-analytics.com/analytics.
+
+			js','ga');
+
+			ga('create', 'UA-44320155-1', 'prxcontrolsolutions.com');
+
+			ga('send', 'pageview');
+
+		</script>
+		
+ <script type="text/javascript">
+      
+    $(document).ready(function() {
+        
+        
+        
+    				$('#linkAudit').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Audit").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkAbout').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#About").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				$('#linkAnalyzer').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Analyzer").offset().top
+                   }, 'slow');
+    					return false;
+    				});    				
+        
+                    $('#linkCS').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Contact").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkHome').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Home").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+                    
+                    $('.carousel').carousel({interval: 3000})
+                    $("#item1_text").addClass("focus-text")
+                    
+                    $('.carousel').on('slide.bs.carousel', function (e) {
+                        console.log(e.relatedTarget.id)
+                        $("#item1_text, #item2_text, #item3_text, #item4_text").removeClass("focus-text")
+                        var id_item=e.relatedTarget.id
+                        $("#"+id_item+"_text").addClass("focus-text")
+                      // do something…
+                    })
+        
+                    $(window).scroll(function() {
+                        var nav = $('#main-nav');
+
+                if ($(this).scrollTop() > 50) {
+
+                     console.log('No se');
+                     nav.removeClass('smallnav');
+                     nav.removeClass('navbar-init');
+                    nav.addClass('header-scroll');
+                    $('#logo_title').addClass('logo-title');
+                    $('.title').addClass('title-font');
+
+                } else {
+                    console.log('there');
+                    nav.addClass('smallnav');
+                    nav.removeClass('header-scroll');
+                    $('#logo_title').removeClass('logo-title');
+                    $('.title').removeClass('title-font');
+
+                }
+            });
+        
+        
+
+
+        });
+
+      
+      
+
+	
+  </script>
+  
+  <script>
+	$(function(){
+
+		$('.submit').keypress(function(e) {
+			if(e.which == 13) {
+				$(this).blur();
+				e.preventDefault();
+				$('#contacto_submit').focus().click();
+			}
+		});
+	});
+</script>
+  
+
+  </head>
+  <body>
+  
+
+  
+  {% include "espaniol/header.html" %}
+  
+  
+  <section class="banner-section row under-header" style="background-image: url({{ STATIC_URL }}/img/banner-about.jpg); " id="Home">
+  
+  <div class="col-sm-12 banner">
+        <div class="banner-contenido">
+            <h2 class="titulo-categoria hidden" id="animate1" style="font-size:62px; color:#002f64; font-weight: 100;">Visión: 
+ </h2>
+
+            <h2 class=" hidden" id="animate2" style="font-size:38px; color:#002f64; font-weight: 100; margin-top:20px">Proveer innovación a planes de salud   </h2>
+            <h2 class="hidden" id="animate3" style="font-size:38px; color:#002f64; font-weight: 100; margin-top: 0px;">y la industria farmacéutica</h2>
+
+
+        </div>
+
+
+    </div>
+    
+</section>
+
+
+
+<!--
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;   padding-left: 100px;
+  padding-right: 100px; line-height: 50px;">
+  In PRX Control Solutions we design and develop solutions for prescription control and health management 
+  </h2>
+-->
+  
+<!--  </h3>-->
+ 
+ 
+  
+
+
+
+<!--
+
+
+<section class="child-page-links-container" data-trigger-active-header="" style="background:#f6f6f6">
+    <div class="row">
+        <div class="col-sm-4 benefits">
+        <div class="circle"><i class="fa fa-money icon"></i></div>
+        <h2 style="color: #002d61;">Save money</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            by detecting more 
+than 30 types of 
+anomalies in 
+prescriptions
+        </p>
+        
+        </div>
+        <div class="col-sm-4 benefits">        <div class="circle"><i class="fa fa-line-chart icon"></i></div>
+        <h2 style="color: #002d61;">Reduce costs</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            by optimizing 
+authorization 
+processes and 
+claims analysis
+        </p>
+        </div>
+        <div class="col-sm-4 benefits">        <div class="circle"><i class="fa fa-bar-chart icon" ></i></div>
+        <h2 style="color: #002d61;">Analyze data</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            in real time using 
+our tailor-made 
+analytics solutions
+        </p></div>
+    </div>
+
+</section>
+-->
+    
+<!--style="background:#fcfcfc"-->
+    
+<section class="laptops-container" data-trigger-active-header="" id="About">
+
+<h3 style="font-size: 28px;
+  text-align: center;
+  line-height: 40px;
+  /* color: #f27516; */
+  color: #002f64; padding-top: 50px; "> Misión: Proveemos soluciones enfocadas en el control de prescripciones y gerencia de la salud.</h3>
+
+
+ 
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;">Nosotros</h2>
+  
+<div class="container">
+      <div class="row" style="">
+         <div class="col-md-12">
+         <p style="line-height: 30px;">
+          PRX Control Solutions es una empresa de healthtech que inició tras 10 años de experiencia de sus fundadores trabajando con farmacias y planes de salud.</p><br>
+
+<p style="line-height: 30px;">La empresa fue fundada en el año 2.012 cuando los fundadores de PRX, identificaron que los planes de salud carecían de recursos y herramientas para el control de los procesos de prescripción y dispensación de tratamientos farmacológicos. </p>
+<br>
+<p style="line-height: 30px;">La primera solución desarrollada por PRX es PCA Audit, una aplicación que detecta 35 tipos de irregularidades en prescripciones y facturas de farmacias. La aplicación cuenta con un algoritmo que compara más de 35 variables en cada reclamo que analiza, recomendando a los clients de la empresa si deben reembolsar o aprobar un tratamiento al paciente o a la farmacia. PCA Audit tiene múltiples usos, como por ejemplo, para auditar reclamos de farmacias o para el proceso de autorización de tratamientos en las farmacias.  </p><br>
+
+       <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 50px; padding-bottom: 80px;   font-weight: normal;   padding-left: 100px;
+  padding-right: 100px; line-height: 50px;">
+  En los primeros 2 años de operaciones PRX Control Solutions ahorró a sus clientes más de US$15MM
+ 
+  </h2>
+     
+     
+
+      </div>
+      
+
+      
+        </div>
+</div>
+  
+</section>
+   
+    
+
+<section class="contact-container" data-trigger-active-header="" style="background:#002d61" id="Contact">
+<h2 style="font-size:38px; color:#fcfcfc; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;"> Nos encantaría saber sobre ti.
+ </h2>
+
+
+					<!--/*Left Row*/-->
+					<div class="row">
+						<div class="col-md-12">
+							<form action="/contact/" id="contacto"  method="post" name="contacto">
+								{% csrf_token %}
+								<div class="row">
+								<div class="col-md-3">
+								</div>
+								
+								<div class="col-md-3">
+								{{ contacto.nombre }}
+								</div>
+								<div class="col-md-3" >
+								{{ contacto.email }}
+								</div>
+								<div class="col-md-3">
+								</div>
+								</div>
+								<div class="row" style="text-align: center;
+  margin-top: 50px;">
+                                    <div class="col-md-3">
+								</div>
+								<div class="col-md-6">
+								
+									{{ contacto.comentario }}
+								</div>
+								<div class="col-md-3">
+								</div>
+								</div>
+							</form>
+							<div style="  text-align: center; padding-top:100px; clear:both;   padding-bottom: 100px;"><a href="#" id="contacto_submit" alt="Enviar" name="Enviar" onclick="contacto.submit();" class="btn btn-large btn-primary btn-without-background" >Enviar</a></div>
+						</div>
+						<!--/span--> 
+					</div>
+
+</section>
+
+
+	{%include "espaniol/footer.html"%}
+
+
+  </body>
+  
+    
+  <script>
+    $(document).ready(function() {
+        
+                   $("#animate1").removeClass("hidden");
+                $("#animate1").addClass("animated");
+                $("#animate1").addClass("fadeInLeft")
+                $("#animate1.fadeInLeft").delay(200).queue(function(){
+                    $("#animate2").removeClass("hidden");
+                    $("#animate2").addClass("animated");
+                    $("#animate2").addClass("fadeInLeft")    
+                    $("#animate2.fadeInLeft").delay(200).queue(function(){
+                        $("#animate3").removeClass("hidden");
+                        $("#animate3").addClass("animated");
+                        $("#animate3").addClass("fadeInLeft")
+                        $(this).dequeue(); 
+                    });       
+                });   
+    })
+</script>
+  
+  
+  
+</html>

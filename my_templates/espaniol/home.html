@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+{% load l10n %}
+<html lang="en">
+ <head>
+<meta name="google-site-verification" content="173airOLHRxU_oGvDNfw4keh5TTWZDNTKdYjrIjIzi4" />
+
+{%include "ingles/script.html" %} 
+  
+  <style>
+     
+        .row {
+         margin: 0px;
+        }
+     </style>
+
+  <script type="text/javascript">
+      
+    $(document).ready(function() {
+        
+        
+        
+    				$('#linkAudit').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Audit").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkFarma').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Farma").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				$('#linkAnalyzer').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Analyzer").offset().top
+                   }, 'slow');
+    					return false;
+    				});    				
+        
+                    $('#linkCS').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Contact").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkHome').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Home").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+                    
+                    $('.carousel').carousel({interval: 2000})
+                    $("#item1_text").addClass("focus-text")
+                    
+                    $('.carousel').on('slide.bs.carousel', function (e) {
+                        $("#item1_text, #item2_text, #item3_text, #item4_text").removeClass("focus-text")
+                        var id_item=e.relatedTarget.id
+                        $("#"+id_item+"_text").addClass("focus-text")
+                      // do something…
+                    })
+        
+                    $(window).scroll(function() {
+                        var nav = $('#main-nav');
+
+                if ($(this).scrollTop() > 50) {
+
+                     nav.removeClass('smallnav');
+                     nav.removeClass('navbar-init');
+                    nav.addClass('header-scroll');
+                    $('#logo_title').addClass('logo-title');
+                    $('.title').addClass('title-font');
+
+                } else {
+                    nav.addClass('smallnav');
+                    nav.removeClass('header-scroll');
+                    $('#logo_title').removeClass('logo-title');
+                    $('.title').removeClass('title-font');
+
+                }
+            });
+        
+        
+
+
+        });
+
+      
+      
+
+	
+  </script>
+  
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-45745219-1', 'prxcontrolsolutions.com');
+	ga('send', 'pageview');
+
+	</script>
+	
+<script>
+	$(function(){
+
+		$('.submit').keypress(function(e) {
+			if(e.which == 13) {
+				$(this).blur();
+				e.preventDefault();
+				$('#contacto_submit').focus().click();
+			}
+		});
+	});
+</script>
+
+	
+  </head>
+  <body>
+  
+  {% include "espaniol/header.html" %}
+  
+  
+  <section class="banner-section row under-header" style="background-image: url({{ STATIC_URL }}/img/banner.jpg); " id="Home">
+  
+  <div class="col-sm-12 banner">
+        <div class="banner-contenido">
+            <h2 class="titulo-categoria hidden" id="animate1" style="font-size:62px; color:#002f64; font-weight: 100;">Inteligencia en Prescripciones</h2>
+
+            <h2 class=" hidden" id="animate2" style="font-size:38px; color:#002f64; font-weight: 100; margin-top:20px">Optimizando planes de salud </h2>
+            <h2 class="hidden" id="animate3" style="font-size:38px; color:#002f64; font-weight: 100; margin-top: 0px;">prescripción por prescripción </h2>
+
+
+        </div>
+
+
+    </div>
+    
+</section>
+
+
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;   padding-left: 100px;
+  padding-right: 100px; line-height: 50px;">
+  
+  En PRX Control Solutions diseñamos y desarrollamos soluciones para el control y la gerencia de prescripciones
+
+  
+  </h2>
+
+  
+
+
+
+
+
+<section class="child-page-links-container" data-trigger-active-header="" style="background:#f6f6f6">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits">
+      <i class="fa fa-money icon img-circle circle"></i>
+        <h2 style="color: #002d61;">Ahorre dinero</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+           Detectamos mas de 30 tipos de irregularidades.
+           
+
+        </p>
+        
+        </div>
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits">      <i class="fa fa-line-chart icon img-circle circle"></i>
+        <h2 style="color: #002d61;">Reduzca costos</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+           Optimizando la autorización de procesos y análisis de reclamos. 
+        </p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits">      <i class="fa fa-bar-chart icon img-circle circle" ></i>
+        <h2 style="color: #002d61;">Analice data</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+           A tiempo real usando nuestras soluciones analíticas a la medida
+        </p></div>
+    </div>
+
+</section>
+    
+
+    
+<section class="laptops-container" data-trigger-active-header="" style="background:#fcfcfc">
+
+
+
+ 
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;"> Soluciones con la mejor interfaz para la web 
+ </h2>
+  
+  <div class="row" style="
+    padding-left: 100px; padding-bottom: 150px;
+">  
+   
+    
+     
+     
+      <div class="col-xs-12  col-sm-6 col-md-6">
+      
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="  width: 548px; ; position:relative;   margin-top: 26px;
+  margin-left: 26px;">
+
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="backgroung:blue" id="item1">
+      <img src="{{ STATIC_URL }}/img/medical-report.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item" style="backgroung:#f0f" id="item2">
+      <img src="{{ STATIC_URL }}/img/resumen.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>    
+     <div class="item" style="backgroung:#f0f" id="item3">
+      <img src="{{ STATIC_URL }}/img/ss3_2.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div> 
+       
+      <div class="item" style="backgroung:#f0f" id="item4">
+      <img src="{{ STATIC_URL }}/img/resumen-claims.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+
+
+</div>
+    
+   <img src="{{ STATIC_URL }}/img/mac.png" alt="" style="width: 600px; position:absolute; top: 0px;">    
+    
+     </div>
+      <div class="col-xs-12  col-sm-6 col-md-6" style="
+    padding-left: 30px;
+    padding-top: 80px;
+    line-height: 40px;
+    font-size: 20px;
+"><p id="item1_text">- Aplicación para auditar reclamos médicos y de farmacia.</p>
+<p id="item2_text">- Aplicación para APEs (Autorizaciones previas electrónicas).</p>
+<p id="item3_text">- Reportes analíticos a tiempo real perzonalizados.</p>
+<p id="item4_text">- Integración fácil con las aplicaciones principales de nuestros clientes. </p> </div>
+  </div>
+ 
+</section>
+
+    
+
+<section class="contact-container" data-trigger-active-header="" style="background:#002d61" id="Contact">
+<h2 style="font-size:38px; color:#fcfcfc; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;">Nos encantaría saber sobre ti.
+ </h2>
+
+					<div class="row">
+						<div class="col-md-12">
+							<form action="/contacto/" id="contacto"  method="post" name="contacto">
+								{% csrf_token %}
+								<div class="row">
+								<div class=" col-xs-1 col-sm-3 col-md-3">
+								</div>
+								
+								<div class="col-xs-5 col-sm-3 col-md-3">
+								{{ contacto.nombre }}
+								</div>
+								<div class="col-xs-5 col-sm-3 col-md-3" >
+								{{ contacto.email }}
+								</div>
+								<div class="col-xs-1 col-sm-3 col-md-3">
+								</div>
+								</div>
+								<div class="row" style="text-align: center;
+  margin-top: 50px;">
+                                    <div class="col-xs-1 col-sm-3 col-md-3">
+								</div>
+								<div class="col-xs-10 col-sm-6 col-md-6">
+								
+									{{ contacto.comentario }}
+								</div>
+								<div class="col-xs-1 col-sm-6 col-md-3">
+								</div>
+								</div>
+							</form>
+							<div style="  text-align: center; padding-top:100px; clear:both;   padding-bottom: 100px;"><a href="#" id="contacto_submit" alt="Enviar" name="Enviar" onclick="contacto.submit();" class="btn btn-large btn-primary btn-without-background" >Enviar</a></div>
+						</div>
+
+					</div>
+
+</section>
+
+
+
+
+	{%include "espaniol/footer.html"%}
+	
+
+
+
+	
+  </body>
+  
+  
+  <script>
+    $(document).ready(function() {
+        
+                   $("#animate1").removeClass("hidden");
+                $("#animate1").addClass("animated");
+                $("#animate1").addClass("fadeInLeft")
+                $("#animate1.fadeInLeft").delay(200).queue(function(){
+                    $("#animate2").removeClass("hidden");
+                    $("#animate2").addClass("animated");
+                    $("#animate2").addClass("fadeInLeft")    
+                    $("#animate2.fadeInLeft").delay(200).queue(function(){
+                        $("#animate3").removeClass("hidden");
+                        $("#animate3").addClass("animated");
+                        $("#animate3").addClass("fadeInLeft")
+                        $(this).dequeue(); 
+                    });       
+                });   
+    })
+</script>
+  
+  
+</html>

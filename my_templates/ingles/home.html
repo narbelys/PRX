@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+{% load l10n %}
+<html lang="en">
+ <head>
+<meta name="google-site-verification" content="173airOLHRxU_oGvDNfw4keh5TTWZDNTKdYjrIjIzi4" />
+
+{%include "ingles/script.html" %} 
+    <style>
+     
+        .row {
+         margin: 0px;
+        }
+     </style>
+
+  <script type="text/javascript">
+      
+    $(document).ready(function() {
+        
+        
+        
+    				$('#linkAudit').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Audit").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkFarma').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Farma").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				$('#linkAnalyzer').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Analyzer").offset().top
+                   }, 'slow');
+    					return false;
+    				});    				
+        
+                    $('#linkCS').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Contact").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+    				
+    				$('#linkHome').click(function(){ //Id del elemento cliqueable
+    					$('html, body').animate({scrollTop:$("#Home").offset().top
+                   }, 'slow');
+    					return false;
+    				});
+                    
+                    $('.carousel').carousel({interval: 3000})
+                    $("#item1_text").addClass("focus-text")
+                    
+                    $('.carousel').on('slide.bs.carousel', function (e) {
+                        console.log(e.relatedTarget.id)
+                        $("#item1_text, #item2_text, #item3_text, #item4_text").removeClass("focus-text")
+                        var id_item=e.relatedTarget.id
+                        $("#"+id_item+"_text").addClass("focus-text")
+                      // do something…
+                    })
+        
+                    $(window).scroll(function() {
+                        var nav = $('#main-nav');
+
+                if ($(this).scrollTop() > 50) {
+
+                     console.log('No se');
+                     nav.removeClass('smallnav');
+                     nav.removeClass('navbar-init');
+                    nav.addClass('header-scroll');
+                    $('#logo_title').addClass('logo-title');
+                    $('.title').addClass('title-font');
+
+                } else {
+                    console.log('there');
+                    nav.addClass('smallnav');
+                    nav.removeClass('header-scroll');
+                    $('#logo_title').removeClass('logo-title');
+                    $('.title').removeClass('title-font');
+
+                }
+            });
+        
+        
+
+
+        });
+
+      
+      
+
+	
+  </script>
+  
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-45745219-1', 'prxcontrolsolutions.com');
+	ga('send', 'pageview');
+
+	</script>
+	
+<script>
+	$(function(){
+
+		$('.submit').keypress(function(e) {
+			if(e.which == 13) {
+				$(this).blur();
+				e.preventDefault();
+				$('#contacto_submit').focus().click();
+			}
+		});
+	});
+</script>
+
+	
+  </head>
+  <body>
+  
+  {% include "ingles/header.html" %}
+  
+  
+  <section class="banner-section row under-header" style="background-image: url({{ STATIC_URL }}/img/banner.jpg); " id="Home">
+  
+  <div class="col-sm-12 banner">
+        <div class="banner-contenido">
+            <h2 class="titulo-categoria hidden" id="animate1" style="font-size:62px; color:#002f64; font-weight: 100;">Prescription Intelligence</h2>
+
+            <h2 class=" hidden" id="animate2" style="font-size:38px; color:#002f64; font-weight: 100; margin-top:20px">Smart solutions for </h2>
+            <h2 class="hidden" id="animate3" style="font-size:38px; color:#002f64; font-weight: 100; margin-top: 0px;">smart and healthy decisions </h2>
+
+<!--            <a class="btn btn-alternative btn-lg btn-categoria animated slideInRight" role="button" id="animate3" href="https://www.fototea.com/presupuesto" style="margin-top: 20px; color: #f8f8f8;">Contact us</a>-->
+        </div>
+<!--        <img alt="" src="images/Bodas/Dollarphotoclub_55760502_banner.jpg">-->
+
+    </div>
+    
+</section>
+
+<!--
+<h3 style="  padding-left: 20%;
+  text-align: center;
+  padding-right: 20%;
+  padding-top: 50px;
+  padding-bottom: 20px;">
+-->
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;   padding-left: 100px;
+  padding-right: 100px; line-height: 50px;">
+  In PRX Control Solutions we design and develop solutions for prescription control and health management 
+  </h2>
+  
+<!--  </h3>-->
+  
+
+
+
+
+
+<section class="child-page-links-container" data-trigger-active-header="" style="background:#f6f6f6">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits">
+        <i class="fa fa-money icon img-circle circle"></i>
+        <h2 style="color: #002d61;">Save money</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            by detecting more 
+than 30 types of 
+anomalies in 
+prescriptions
+        </p>
+        
+        </div>
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits"> <i class="fa fa-line-chart icon img-circle circle"></i>
+        <h2 style="color: #002d61;">Reduce costs</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            by optimizing 
+authorization 
+processes and 
+claims analysis
+        </p>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xs-12 benefits">    <i class="fa fa-bar-chart icon img-circle circle" ></i>
+        <h2 style="color: #002d61;">Analyze data</h2>
+        <p style="  padding-left: 90px;
+  padding-right: 90px;">
+            in real time using 
+our tailor-made 
+analytics solutions
+        </p></div>
+    </div>
+
+</section>
+    
+    
+<section class="laptops-container" data-trigger-active-header="" style="background:#fcfcfc">
+
+
+
+ 
+ <h2 style="font-size:38px; color:#002f64; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;"> Web based solutions with the best UX/UI</h2>
+  
+  <div class="row" style="
+    padding-left: 100px; padding-bottom: 150px;
+">
+      <div class="col-md-6">
+      
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="  width: 548px; ; position:relative;   margin-top: 26px;
+  margin-left: 26px;">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active" style="backgroung:blue" id="item1">
+      <img src="{{ STATIC_URL }}/img/medical-report.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>
+    <div class="item" style="backgroung:#f0f" id="item2">
+      <img src="{{ STATIC_URL }}/img/resumen.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>    
+     <div class="item" style="backgroung:#f0f" id="item3">
+      <img src="{{ STATIC_URL }}/img/ss3_2.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div> 
+       
+      <div class="item" style="backgroung:#f0f" id="item4">
+      <img src="{{ STATIC_URL }}/img/resumen-claims.png" alt="..." width="548" height="310">
+      <div class="carousel-caption">
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+<!--
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+-->
+</div>
+   
+   <img src="{{ STATIC_URL }}/img/mac.png" alt="" style="width: 600px; position:absolute; top: 0px;">    
+    
+     </div>
+      <div class="col-md-6" style="
+    padding-left: 30px;
+    padding-top: 80px;
+    line-height: 40px;
+    font-size: 20px;
+"><p id="item1_text">- App for auditing medical and pharmacy claims</p>
+<p id="item2_text">- App for EPA's (electronic previous authorizations) in pharmacies</p>
+<p id="item3_text">- Real time analytics with custom made reports</p>
+<p id="item4_text">- Easy integrations with our customer's core systems</p> </div>
+  </div>
+  
+</section>
+    
+
+<section class="contact-container" data-trigger-active-header="" style="background:#002d61" id="Contact">
+<h2 style="font-size:38px; color:#fcfcfc; text-align:center;   padding-top: 100px; padding-bottom: 80px;   font-weight: normal;"> We’d love to hear from you.
+ </h2>
+
+
+					<!--/*Left Row*/-->
+					<div class="row">
+						<div class="col-md-12">
+                            <form action="/contacto/" id="contacto"  method="post" name="contacto">
+								{% csrf_token %}
+								<div class="row">
+								<div class=" col-xs-1 col-sm-3 col-md-3">
+								</div>
+								
+								<div class="col-xs-5 col-sm-3 col-md-3">
+								{{ contacto.nombre }}
+								</div>
+								<div class="col-xs-5 col-sm-3 col-md-3" >
+								{{ contacto.email }}
+								</div>
+								<div class="col-xs-1 col-sm-3 col-md-3">
+								</div>
+								</div>
+								<div class="row" style="text-align: center;
+  margin-top: 50px;">
+                                    <div class="col-xs-1 col-sm-3 col-md-3">
+								</div>
+								<div class="col-xs-10 col-sm-6 col-md-6">
+								
+									{{ contacto.comentario }}
+								</div>
+								<div class="col-xs-1 col-sm-6 col-md-3">
+								</div>
+								</div>
+							</form>
+							<div style="  text-align: center; padding-top:100px; clear:both;   padding-bottom: 100px;"><a href="#" id="contacto_submit" alt="Enviar" name="Enviar" onclick="contacto.submit();" class="btn btn-large btn-primary btn-without-background" >Send</a></div>
+						</div>
+						<!--/span--> 
+					</div>
+
+</section>
+<div style="position: fixed;
+  right: 0;
+  left: 0;
+  z-index: 1030;">
+    holaaa
+</div>
+<br><br><br>
+
+
+
+	
+ 
+<!--
+  
+      <div class="container" id="Home">
+      	<div class=row-fluid style="padding-top:90px; padding-bottom:20px; ">
+			<iframe width="940" height="500" src="//www.youtube.com/embed/FjgOK9Ku800?autohide=1&version=3&autoplay=1enablejsapi=1" frameborder="0" allowfullscreen></iframe>
+		</div>
+-->
+
+		<!-- Banner temporal para colocar adsense mientras tanto-->
+
+<!--
+		<center>
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+-->
+			<!-- Horizontal Venezuela -->
+<!--
+			<ins class="adsbygoogle"
+
+		<!-- Fin de Banner temporal para colocar adsense mientras tanto-->
+
+<!--
+		<div class=row-fluid style="padding-top:100px; padding-bottom:20px; ">
+				<div class=span8>
+				<h1>Business intelligence applied to health</h1>
+
+				<div class=row-fluid style="padding-top:20px">
+					PRX Control Solutions is a company specialized in developing and 
+
+					managing applications of for insurance companies, health providers, 
+
+					government institutions and the pharmaceutical industry.
+				</div>
+
+				<div class=row-fluid style="padding-top:30px">
+					Our products and services are designed and developed for prescription 
+
+					control and health management.
+				</div>
+				
+				<div class=row-fluid style="padding-top:30px">
+					In PRX we solved 3 problems: the lack of control over medication 
+
+					consumption, patient supervision and the necessary data for 
+
+					pharmaceutical industry to make better decisions and create programs 
+
+					to improve the life of human beings.
+				</div>
+				</div>
+				
+				<div class=span4 style="">
+				<img src="{{ STATIC_URL }}/img/imagenH1.jpg" alt="PCA Audit">
+				</div>
+		</div>
+-->
+<!--
+	</div>
+		<div class="divisor"></div>
+-->
+<!-- 		<hr> -->
+<!--
+	<div class="container" style="padding-bottom:50px;">
+			<img src="{{ STATIC_URL }}/img/imagenH3.png"  style="padding-top:250px;position:absolute; padding-left:380px; width:255px; height:180px" alt="PCA Audit">
+-->
+<!-- 			style="padding-top:20px" -->
+<!--
+		<div class="row-fluid" style="padding-top:20px;">
+			<h1><center>Business intelligence applied to health</center></h1>
+
+			</div>
+			
+			<div class="row-fluid" style="padding-top:10px;">
+-->
+<!-- 			<div class=span6 style="background:#f0f; padding-left:30px"> -->
+<!--
+			
+			<div class=span6 style="padding-left:30px; background: rgb(247,247,247); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(247,247,247,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 93%, rgba(247,247,247,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(247,247,247,1)), color-stop(7%,rgba(255,255,255,1)), color-stop(93%,rgba(255,255,255,1)), color-stop(100%,rgba(247,247,247,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f7f7f7',GradientType=1 ); /* IE6-9 */
+">
+				<img src="{{ STATIC_URL }}/img/imagenH5.jpg" alt="PCA Audit" style="width:400px; height:306px">
+			</div>
+			
+			<div class=span6 style="padding-left:30px; background: rgb(247,247,247); /* Old browsers */
+background: -moz-linear-gradient(left,  rgba(247,247,247,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 93%, rgba(247,247,247,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(247,247,247,1)), color-stop(7%,rgba(255,255,255,1)), color-stop(93%,rgba(255,255,255,1)), color-stop(100%,rgba(247,247,247,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* IE10+ */
+background: linear-gradient(to right,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f7f7f7',GradientType=1 ); /* IE6-9 */
+">
+				<img src="{{ STATIC_URL }}/img/imagenH4.jpg" alt="PCA Audit" style="padding-top:20px">
+			</div>
+			</div>
+-->
+<!-- 		</div> -->
+<!--
+		<div class="row-fluid" style="padding-top:20px">
+		
+			<div class="span6 cajaAzul">
+				<center><h2>PCA Audit</h2></center>
+				Analyze and control health 
+
+				claims from a clinical and 
+
+				pharmaceutical point of view.
+				<a id="linkAudit">See more</a>
+			</div>
+			
+			<div class="span6 cajaNaranja">
+				<center><h2>PCA Farma</h2></center>
+-->
+<!--
+				Increase your pharmacie’s 
+
+				sales, control and supervise 
+
+				your patient’s healths.
+-->
+<!--
+            Control and supervise the health of chronic patients in your
+
+health plan
+				<a id="linkFarma">See more</a>
+			</div>
+-->
+			
+<!--			<div class="span4 cajaAzul">
+				<center><h2>PCA Metrics</h2></center>
+					Analyze pharmaceutical data in 
+
+					real time, with real clinical 
+
+					cases.
+				<a id="linkAnalyzer">See more</a>
+			</div>-->
+		
+		
+<!--
+		</div>
+	</div>
+      <div class="divisor" id="Audit"></div>
+ 	<div class="container" style="padding-bottom:20px;" >  
+      	<div class="row-fluid" style="padding-top:60px;">
+			<h1><center>PCA Audit</center></h1>
+			
+			<h4>Analyze and control health claims from a clinical and pharmaceutical 
+			point of view</h4>
+			<hr>
+			<div class="row-fluid" style="">
+					<div class="span10" style="margin-left:10%; margin-right:20%; background: rgb(247,247,247); /* Old browsers */
+		background: -moz-linear-gradient(left,  rgba(247,247,247,1) 0%, rgba(255,255,255,1) 7%, rgba(255,255,255,1) 93%, rgba(247,247,247,1) 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(247,247,247,1)), color-stop(7%,rgba(255,255,255,1)), color-stop(93%,rgba(255,255,255,1)), color-stop(100%,rgba(247,247,247,1))); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(left,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* IE10+ */
+		background: linear-gradient(to right,  rgba(247,247,247,1) 0%,rgba(255,255,255,1) 7%,rgba(255,255,255,1) 93%,rgba(247,247,247,1) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7f7f7', endColorstr='#f7f7f7',GradientType=1 ); /* IE6-9 */
+		">
+						<center><img src="{{ STATIC_URL }}/img/imagenH2.jpg" alt="" style="padding-top:20px; width:450px; height:314px"></center>
+						
+					</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px;">
+				PCA Audit is an app used to audit and process health claims with 
+
+				pharmaceutical treatments. This app guarantees our clients with 
+
+				millions of dollars in savings by detecting fraud and controlling and 
+
+				supervising patients with their intake of chronic and acute 
+
+				medications. PCA Audit works with an algorithm designed to detect 
+
+				more than 30 types of irregularities in prescriptions and pharmacy 
+
+				invoices.
+			</div>
+
+			<div class="row-fluid" style="padding-top:50px;">
+				<div class="span6">
+-->
+<!--					<div class="row-fluid">
+					<h2>Módulos de PCA Audit:</h2>
+					- Reembolso de tratamientos farmacológicos. <br> 
+					- Generación de órdenes de farmacia. <br>
+					- Auditorías de facturas de farmacias. <br>
+					</div>-->
+					
+<!--
+					<div class="row-fluid" style="padding-top:50px;">
+					<h2>Benefits:</h2>
+					- Increase profitability by fraud detection. <br>
+					- Optimize the health claim process. <br>
+					- Reduce operative costs. <br>
+					- Data for management decisions. </br>
+					- Supervise patient’s healths.
+					</div>
+				</div>
+				<div class="span6">
+					<img src="{{ STATIC_URL }}/img/banner02_2.png" alt="" style="padding-top:20px">
+					<img src="{{ STATIC_URL }}/img/banner03_2_n.png" alt="" style="padding-top:20px">
+				</div>
+			</div>
+			<div class="row-fluid" style="padding-top:50px;">
+				<center>To know more about PCA Audit, click here <a href="http://www.pcaaudit.com/">http://www.pcaaudit.com/</a>  or contact us <a href="http://prxcontrolsolutions.com/contact"> http://prxcontrolsolutions.com/contact</a> </center>
+				</div>
+		</div>
+		
+      </div>
+      
+    <div class="divisor" id="Farma"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+			<h1><center>PCA Farma</center></h1>
+-->
+<!--			<h4>Increase your pharmacy's sales, control and supervise your patient’s healths</h4>-->
+<!--
+			<h4>Control and supervise the health of chronic patients in your
+
+health plan</h4>
+			<hr>
+			
+			<div class="row-fluid" style="">
+				<div class="span10" style="margin-left:10%; margin-right:20%;">
+				<center><img src="{{ STATIC_URL }}/img/imagen5.jpg" alt=""   style="padding-top:20px; height:323px; width:436px;"></center>
+-->
+<!-- 					height="623px" width="461px" -->
+<!--
+				</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px;">
+			PCA Farma is an app that supervises the health of chronic patients that belong to
+
+health plans
+-->
+<!--
+			</br></br>
+
+			With PCA Farma pharmacies can retain patients, offering a 
+
+			personalized service and ensuring they renew their treatments in 
+
+			their pharmacies; thereby competing with large pharmacy chains.
+-->
+<!--
+			</div>
+
+			<div class="row-fluid" style="padding-top:30px;">
+				<div class="span6">
+					<div class="row-fluid" style="padding-top:50px;">
+					<h2>Benefits:</h2>
+					- Monthly health monitoring of chronic patients. <br>
+					- Education of patients about the importance of pharmacological treatments. <br>
+					- Monthly reminders via email and SMS for prescription renewal. <br>
+					- Costs reductions from disease control. <br>
+					- Less interventions in hospitals and clinics. <br>
+					- Less employee absenteeism to work. <br>
+-->
+<!--
+					- Compete with large pharmacy chains. <br>
+					- Retain chronic patients. <br>
+					- Increase sales in the first month. <br>
+					- Detect prescription errors. <br>
+					- Treat patients in a personal manner. <br>
+					- Remind patients for treatment renewal. <br>
+					- Data. <br>
+					- Access your information from the cloud. <br>
+					- Branding. <br>
+					- Send promotional information to patients.
+-->
+<!--
+					</div>
+				</div>
+				<div class="span6" style="padding-top:70px">
+					<img src="{{ STATIC_URL }}/img/bannerFarma.png" alt="" >
+				</div>
+			</div>
+			<div class="row-fluid" style="padding-top:50px;">
+				<center>To know more about PCA Farma, click here <a href="http://www.pcafarma.com/">http://www.pcafarma.com/</a>  or contact us <a href="http://prxcontrolsolutions.com/contact"> http://prxcontrolsolutions.com/contact</a> </center>
+				</div>
+
+			
+		</div>
+	</div>
+-->
+	
+<!--	<div class="divisor" id="Analyzer"></div>
+ 	<div class="container" style="padding-bottom:20px;">   
+      	<div class="row-fluid" style="padding-top:60px;">
+			<h1><center>PCA Metrics</center></h1>
+			<h4>Analyze pharmaceutical data in real time, with real clinical cases.</h4>
+			<hr>
+			
+			<div class="row-fluid" style="">
+				<div class="span10" style="margin-left:10%; margin-right:20%;">
+				<center><img src="{{ STATIC_URL }}/img/imagen4.jpg" alt=""  style="padding-top:20px; height:323px; width:436px"></center>
+				</div>
+			</div>
+			
+			<div class="row-fluid" style="padding-top:50px;">
+				PCA Metrics is an app that provides the pharmaceutical industry, 
+
+				insurance companies, health providers and government 
+
+				institutions with real pharmaceutical data from real clinical cases.
+			</div>
+
+			<div class="row-fluid" style="padding-top:30px;">
+				<div class="span6">
+					<div class="row-fluid" style="padding-top:50px;">
+					<h2>Reports:</h2>
+						- Prescriptions by disease. <br>
+						- Medical indications per treatment.<br>
+						- Prescription vs treament dispensal.<br>
+						- Selfmedication and treatment sustitution. <br>
+						- Medication prices. <br>
+						- Demographic data.
+					</div>
+				</div>
+				<div class="span6" style="padding-top:70px">
+					<img src="{{ STATIC_URL }}/img/bannerAnalyzer.png" alt="" >
+				</div>
+			</div>
+		</div>
+	</div>-->
+	
+
+    
+
+	{%include "ingles/footer.html"%}
+
+
+	
+  </body>
+  
+  
+  <script>
+    $(document).ready(function() {
+        
+                   $("#animate1").removeClass("hidden");
+                $("#animate1").addClass("animated");
+                $("#animate1").addClass("fadeInLeft")
+                $("#animate1.fadeInLeft").delay(200).queue(function(){
+                    $("#animate2").removeClass("hidden");
+                    $("#animate2").addClass("animated");
+                    $("#animate2").addClass("fadeInLeft")    
+                    $("#animate2.fadeInLeft").delay(200).queue(function(){
+                        $("#animate3").removeClass("hidden");
+                        $("#animate3").addClass("animated");
+                        $("#animate3").addClass("fadeInLeft")
+                        $(this).dequeue(); 
+                    });       
+                });   
+    })
+</script>
+  
+  
+</html>

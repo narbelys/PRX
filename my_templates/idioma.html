@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load l10n %}
+<html lang="en">
+ <head>
+ <script type="text/javascript"> 
+	var language = navigator.language;
+	if (language == null) { 
+		language = navigator.userLanguage; 
+		if (language == null) language = "es"; 
+	} 
+	language = language.substring(0, 2);
+// 	alert(language); 
+	if (language=='es' || language=='es-ar' || language=='es-bo' || language=='es-cl' || language=='es-co' || language=='es-cr' || language=='es-do' || language=='es-ec' || language=='es-sv' || language=='es-gt' || language=='es-hn' || language=='es-mx' || language=='es-ni' || language=='es-pa' || language=='es-py' || language=='es-pe' || language=='es-pr' || language=='es-us' || language=='es-uy' || language=='es-ve' || language=='es') {
+// 			alert("HOLAAA")
+// 			window.location = "http://localhost:8000/inicio/"
+			window.location = "http://prxcontrolsolutions.com/inicio/"
+		
+	}else if (language=='en' || language=='en-au' || language=='en-bz' || language=='en-ca' || language=='en-ie' || language=='en-jm' || language=='en-nz' || language=='en-ph' || language=='en-za' || language=='en-tt' || language=='en-gb' || language=='en-us' || language=='en-zw' || language=='en' || language=='us'){
+		window.location = "http://prxcontrolsolutions.com/home/"
+	}else{
+		window.location = "http://prxcontrolsolutions.com/home/"
+	}
+  </script>
+  </head>
+  <body>
+			
+  </body>
+  
+  
+</html>

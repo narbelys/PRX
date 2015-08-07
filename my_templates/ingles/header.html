@@ -1,0 +1,164 @@
+<!--
+
+  <div class="header">
+    <div id="background"></div>
+	<div class="navbar navbar-inverse navbar-fixed-top  navbar-custom">
+          <div class="navbar-inner" id="navegacion" style="background: none !important;   box-shadow: none;">
+          <div class="navbar-inner" id="navegacion">
+           <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#"><img style="width:94px; height:61px" src="{{ STATIC_URL }}/img/company_logo.png" alt="PCA Audit"></a>
+            <div class="nav-collapse collapse" style="padding-top:20px">
+              <ul class="nav pull-right">
+                        <li id="linkHome" class="menu"><a href="/home/" class="menuA">Home</a> </li>
+                        <li id="linkFarmacia" class="menu"><a href="/about/" class="menuA">About us</a> </li>
+                        <li id="linkIDE" class="menu dropdown dropdownMain">
+                                <a class="dropdown-toggle dropdownA" data-toggle="dropdown" href="#">
+                                  Vademécum
+                                  <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a tabindex="-1" href="http://prxvademecum.com"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Venezuela.png" alt=""> Venezuela </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.pa"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Panama.png" alt=""> Panama </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.us"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_EEUU.png" alt=""> United States </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademcum.com.ec"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Ecuador.png" alt=""> Ecuador </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.pe"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Peru.png" alt=""> Peru </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.co"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Colombia.png" alt=""> Colombia </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.es"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Spain.png" alt=""> Spain </a></li>
+                                </ul>
+                        </li>
+                        <li id="linkSN" class="menu"><a href="/contact" class="menuA">Contact us</a> </li>
+                        <li> <a href="/inicio/" style="width:16px; height:11px; padding:8px"><img  src="{{ STATIC_URL }}/img/espanol.png" alt="Español"></a></li>
+                        <li> <a href="" style="width:16px; height:11px; padding:8px"><img style="" src="{{ STATIC_URL }}/img/ingles.png" alt="Ingles"></a></li>
+
+
+              </ul>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+</div>
+-->
+
+
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default navbar-fixed-top navbar-init" id="main-nav" >
+    <div class="container" >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+         <a class="navbar-brand" href="/home"><b><img src="{{ STATIC_URL }}/img/company_logo_only.png" alt="PCA Audit" id="logo_title" style="   width: 43px;"> <span class="title" >PRX Control Solutions</span></b></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+                        <li id="linkHome" class="menu"><a href="/home" class="menuA">Home</a> </li>
+                        <li id="linkAbout" class="menu"><a href="/about/" class="menuA">About</a> </li>
+                        <li id="linkIDE" class="menu dropdown dropdownMain">
+<!--                                <a class="dropdown-toggle dropdownA" data-toggle="dropdown" href="#">-->
+                                <a class="dropdown-toggle menuA" data-toggle="dropdown" href="#">
+                                  Vademécum
+                                  <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" style="background: rgba(255,255,255,0.5);">
+                                  <li><a tabindex="-1" href="http://prxvademecum.com"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Venezuela.png" alt=""> Venezuela </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.pa"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Panama.png" alt=""> Panama </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.us"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_EEUU.png" alt=""> United States </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademcum.com.ec"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Ecuador.png" alt=""> Ecuador </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.pe"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Peru.png" alt=""> Peru </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.co"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Colombia.png" alt=""> Colombia </a></li>
+                                </ul>
+                                
+                                
+                        </li>
+                        
+                        
+<!--
+                        <li id="linkIDE" class="menu dropdown dropdownMain" style=" padding-right: 12px;">
+                                <a class="dropdown-toggle menuA" type="button" id="dropdown_country" data-toggle="dropdown" style="  text-decoration: none;
+  cursor: pointer;">
+                                    <img alt="" src="{{ STATIC_URL }}/img/banderas/EEUU.jpg" class="flag">
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown_country" style="  min-width: 50px;
+  margin-right: 27px;
+  background: rgba(255,255,255,0.5);">
+                                    <li role="presentation" class="flag-selected">
+                                        <a href="" role="menuitem" tabindex="-1" href="#">
+                                            <img alt="English" src="{{ STATIC_URL }}/img/banderas/EEUU.jpg" class="flag" title="English">
+                                        </a>
+                                    </li>
+                                    <li role="presentation" class="">
+                                        <a href="/inicio/" role="menuitem" tabindex="-1" href="https://www.fototea.com/?country=chile">
+                                            <img src="{{ STATIC_URL }}/img/banderas/Spain.png" class="flag" alt="Español" title="Español">
+                                        </a>
+                                    </li>
+                                </ul>
+                
+                        </li>
+-->
+
+                        <li id="linkCS" class="menu"><a href="" class="menuA">Contact us</a> </li>
+<!--
+                        <li> <a href="/inicio/" style="width:16px; height:11px; padding:8px"><img  src="{{ STATIC_URL }}/img/espanol.png" alt="Español"></a></li>
+                        <li> <a href="" style="width:16px; height:11px; padding:8px"><img style="" src="{{ STATIC_URL }}/img/ingles.png" alt="Ingles"></a></li>
+-->
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+  
+  
+  
+
+
+<!--
+
+		<div class="navbar navbar-inverse navbar-fixed-top" style="opacity:0px">
+          <div class="navbar-inner" id="navegacion">
+           <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="#"><img style="width:94px; height:61px" src="{{ STATIC_URL }}/img/company_logo.png" alt="PCA Audit"></a>
+            <div class="nav-collapse collapse" style="padding-top:20px">
+              <ul class="nav pull-right">
+                        <li id="linkHome" class="menu"><a href="/home/" class="menuA">Home</a> </li>
+                        <li id="linkFarmacia" class="menu"><a href="/about/" class="menuA">About us</a> </li>
+                        <li id="linkIDE" class="menu dropdown dropdownMain">
+                                <a class="dropdown-toggle dropdownA" data-toggle="dropdown" href="#">
+                                  Vademécum
+                                  <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                  <li><a tabindex="-1" href="http://prxvademecum.com"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Venezuela.png" alt=""> Venezuela </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.pa"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Panama.png" alt=""> Panama </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.us"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_EEUU.png" alt=""> United States </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademcum.com.ec"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Ecuador.png" alt=""> Ecuador </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.pe"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Peru.png" alt=""> Peru </a></li>
+                                  <li><a tabindex="-1" href="http://prxvademecum.com.co"><img src="{{ STATIC_URL }}/img/banderas/Flag_of_Colombia.png" alt=""> Colombia </a></li>
+                                </ul>
+                        </li>
+
+                        <li id="linkSN" class="menu"><a href="/contact" class="menuA">Contact us</a> </li>
+                        <li> <a href="/inicio/" style="width:16px; height:11px; padding:8px"><img  src="{{ STATIC_URL }}/img/espanol.png" alt="Español"></a></li>
+                        <li> <a href="" style="width:16px; height:11px; padding:8px"><img style="" src="{{ STATIC_URL }}/img/ingles.png" alt="Ingles"></a></li>
+
+              </ul>
+            </div>
+          
+          </div>
+        </div>
+      </div>-->
